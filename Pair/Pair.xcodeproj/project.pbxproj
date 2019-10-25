@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		FC90DCFF236348600020C8F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC90DCFE236348600020C8F4 /* AppDelegate.swift */; };
 		FC90DD01236348600020C8F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC90DD00236348600020C8F4 /* SceneDelegate.swift */; };
-		FC90DD03236348600020C8F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC90DD02236348600020C8F4 /* ViewController.swift */; };
 		FC90DD06236348600020C8F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC90DD04236348600020C8F4 /* Main.storyboard */; };
 		FC90DD08236348620020C8F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC90DD07236348620020C8F4 /* Assets.xcassets */; };
 		FC90DD0B236348620020C8F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC90DD09236348620020C8F4 /* LaunchScreen.storyboard */; };
+		FC90DD19236349EC0020C8F4 /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC90DD18236349EC0020C8F4 /* Pair.swift */; };
+		FC90DD1B23634DC80020C8F4 /* PairListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC90DD1A23634DC80020C8F4 /* PairListTableViewController.swift */; };
+		FC90DD1D23634F530020C8F4 /* PairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC90DD1C23634F530020C8F4 /* PairController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC90DCFB236348600020C8F4 /* Pair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC90DCFE236348600020C8F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC90DD00236348600020C8F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC90DD02236348600020C8F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC90DD05236348600020C8F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC90DD07236348620020C8F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC90DD0A236348620020C8F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC90DD0C236348620020C8F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC90DD18236349EC0020C8F4 /* Pair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
+		FC90DD1A23634DC80020C8F4 /* PairListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairListTableViewController.swift; sourceTree = "<group>"; };
+		FC90DD1C23634F530020C8F4 /* PairController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,9 @@
 		FC90DCFD236348600020C8F4 /* Pair */ = {
 			isa = PBXGroup;
 			children = (
+				FC90DD13236348760020C8F4 /* Models */,
 				FC90DD152363487F0020C8F4 /* Controllers */,
 				FC90DD142363487B0020C8F4 /* Views */,
-				FC90DD13236348760020C8F4 /* Models */,
 				FC90DD12236348710020C8F4 /* Resources */,
 			);
 			path = Pair;
@@ -79,6 +83,7 @@
 		FC90DD13236348760020C8F4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FC90DD18236349EC0020C8F4 /* Pair.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -103,7 +108,7 @@
 		FC90DD162363488D0020C8F4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC90DD02236348600020C8F4 /* ViewController.swift */,
+				FC90DD1A23634DC80020C8F4 /* PairListTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 		FC90DD17236348920020C8F4 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC90DD1C23634F530020C8F4 /* PairController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -186,9 +192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC90DD03236348600020C8F4 /* ViewController.swift in Sources */,
+				FC90DD19236349EC0020C8F4 /* Pair.swift in Sources */,
+				FC90DD1B23634DC80020C8F4 /* PairListTableViewController.swift in Sources */,
 				FC90DCFF236348600020C8F4 /* AppDelegate.swift in Sources */,
 				FC90DD01236348600020C8F4 /* SceneDelegate.swift in Sources */,
+				FC90DD1D23634F530020C8F4 /* PairController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
