@@ -16,8 +16,6 @@ class PairController {
     let publicDB = CKContainer.default().publicCloudDatabase
     var pairs: [Pair] = []
     
-    
-    
     func addName(with name: String, completion: @escaping (_ success: Bool) -> (Void)) {
         let newName = Pair(name: name)
         let nameRecord = CKRecord(name: newName)
@@ -85,5 +83,10 @@ class PairController {
                  completion(true)
              }
          }
+    
+    func randomize(pairs: Pair) -> [Pair] {
+        var pairs = self.pairs
+        return pairs.shuffled()
+       }
     
 } // end of class

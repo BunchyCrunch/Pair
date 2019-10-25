@@ -13,8 +13,9 @@
 		FC90DD08236348620020C8F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC90DD07236348620020C8F4 /* Assets.xcassets */; };
 		FC90DD0B236348620020C8F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC90DD09236348620020C8F4 /* LaunchScreen.storyboard */; };
 		FC90DD19236349EC0020C8F4 /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC90DD18236349EC0020C8F4 /* Pair.swift */; };
-		FC90DD1B23634DC80020C8F4 /* PairListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC90DD1A23634DC80020C8F4 /* PairListTableViewController.swift */; };
 		FC90DD1D23634F530020C8F4 /* PairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC90DD1C23634F530020C8F4 /* PairController.swift */; };
+		FC90DD1F2363600B0020C8F4 /* PairListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC90DD1E2363600B0020C8F4 /* PairListViewController.swift */; };
+		FC90DD232363620E0020C8F4 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC90DD222363620E0020C8F4 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,10 @@
 		FC90DD0A236348620020C8F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC90DD0C236348620020C8F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC90DD18236349EC0020C8F4 /* Pair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
-		FC90DD1A23634DC80020C8F4 /* PairListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairListTableViewController.swift; sourceTree = "<group>"; };
 		FC90DD1C23634F530020C8F4 /* PairController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairController.swift; sourceTree = "<group>"; };
+		FC90DD1E2363600B0020C8F4 /* PairListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairListViewController.swift; sourceTree = "<group>"; };
+		FC90DD20236361F80020C8F4 /* Pair.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pair.entitlements; sourceTree = "<group>"; };
+		FC90DD222363620E0020C8F4 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC90DD232363620E0020C8F4 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +50,7 @@
 			children = (
 				FC90DCFD236348600020C8F4 /* Pair */,
 				FC90DCFC236348600020C8F4 /* Products */,
+				FC90DD212363620E0020C8F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +65,7 @@
 		FC90DCFD236348600020C8F4 /* Pair */ = {
 			isa = PBXGroup;
 			children = (
+				FC90DD20236361F80020C8F4 /* Pair.entitlements */,
 				FC90DD13236348760020C8F4 /* Models */,
 				FC90DD152363487F0020C8F4 /* Controllers */,
 				FC90DD142363487B0020C8F4 /* Views */,
@@ -108,7 +114,7 @@
 		FC90DD162363488D0020C8F4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC90DD1A23634DC80020C8F4 /* PairListTableViewController.swift */,
+				FC90DD1E2363600B0020C8F4 /* PairListViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -119,6 +125,14 @@
 				FC90DD1C23634F530020C8F4 /* PairController.swift */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		FC90DD212363620E0020C8F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC90DD222363620E0020C8F4 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC90DD19236349EC0020C8F4 /* Pair.swift in Sources */,
-				FC90DD1B23634DC80020C8F4 /* PairListTableViewController.swift in Sources */,
+				FC90DD1F2363600B0020C8F4 /* PairListViewController.swift in Sources */,
 				FC90DCFF236348600020C8F4 /* AppDelegate.swift in Sources */,
 				FC90DD01236348600020C8F4 /* SceneDelegate.swift in Sources */,
 				FC90DD1D23634F530020C8F4 /* PairController.swift in Sources */,
@@ -340,14 +354,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Pair/Pair.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LNY44KHWJJ;
-				INFOPLIST_FILE = Pair/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Pair/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Pair;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Pair.JS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -358,14 +373,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Pair/Pair.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LNY44KHWJJ;
-				INFOPLIST_FILE = Pair/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Pair/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Pair;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Pair.JS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

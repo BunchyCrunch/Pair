@@ -28,7 +28,7 @@ extension Pair {
     convenience init? (ckRecord: CKRecord) {
         guard let name = ckRecord[PairStrings.nameKey] as? String else { return nil }
         
-        self.init(name: name, ckRecordID: ckRecord.recordID)
+        self.init(name: name)
     }
 }
 
